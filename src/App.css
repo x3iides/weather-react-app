@@ -9,11 +9,12 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: 'Segoe UI', system-ui, sans-serif;
   background: url('./assets/bg-dark.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-position: cover;
+  background-size: cover;
 }
 
 .app {
@@ -47,10 +48,11 @@ body {
   outline: none;
   transition: border-color 0.15s;
   color: var(--white);
+  border: 1px solid transparent;
 }
 
 .search-wrapper input:focus {
-  border: 1px solid #ccc;
+  border-color: #ccc;
 }
 
 .dropdown {
@@ -110,35 +112,6 @@ body {
   }
 }
 
-/* Error / loading */
-.error {
-  margin-top: 12px;
-  font-size: 0.9rem;
-}
-
 .history {
   padding: var(--padding);
-}
-
-.history ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.history li {
-  padding: 10px 12px;
-  border-radius: .5rem;
-  cursor: pointer;
-  background: rgba(10, 10, 10, 0.3);
-  transition: background 0.15s;
-}
-
-.history li button {
-  min-width: 32px;
-  min-height: 32px;
-  
-  &:hover {
-    cursor: pointer;
-  }
 }

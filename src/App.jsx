@@ -99,6 +99,7 @@ function App() {
   const handleSelectSuggestion = (place) => {
     setQuery(formatPlaceName(place));
     setSuggestions([]);
+    setShowDropdown(false);
     fetchWeatherByCoords(place);
   };
 

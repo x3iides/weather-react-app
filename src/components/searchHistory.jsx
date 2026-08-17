@@ -14,7 +14,7 @@ const SearchHistory = ({ history, onItemClick, onItemRemove }) => {
           <li
             key={item.id}
             onClick={() => onItemClick(item)}
-            className="flex justify-between items-center px-4 py-3 gap-4 cursor-pointer hover:opacity-70 transition"
+            className="flex justify-between items-center px-4 py-3 gap-4 rounded-lg bg-black/30 cursor-pointer hover:opacity-70 transition"
           >
             <div className="flex items-center justify-between w-full gap-2 md:gap-3 flex-wrap">
               <span className="text-sm font-medium text-white">{item.displayName}</span>
@@ -23,7 +23,7 @@ const SearchHistory = ({ history, onItemClick, onItemRemove }) => {
               
             <button
               onClick={(e) => onItemRemove(item.id, e)}
-              className="flex items-center justify-center rounded-full border border-white bg-transparent transition hover:bg-white"
+              className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full border border-white bg-transparent transition hover:bg-white"
               aria-label="Delete"
             >
               <FontAwesomeIcon icon={faTrashCan} className="text-red-400 text-sm" />
