@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --padding: 20px;
+  --white: #f0f0f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: url('./assets/bg-dark.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: cover;
+}
+
+.app {
+  width: 100%;
+  max-width: 968px;
+  padding: 1rem;
+  margin: 60px auto;
+  border-radius: 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.card-wrapper {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background: #333;
+  outline: none;
+  transition: border-color 0.15s;
+  color: var(--white);
+}
+
+.search-wrapper input:focus {
+  border: 1px solid #ccc;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #d0d7e2;
+  border-radius: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.dropdown li {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.dropdown li:hover {
+  background: #f0f4fa;
+}
+
+/* Weather card */
+.weather-card {
+  margin-top: 24px;
+  padding: var(--padding);
+  gap: 50px;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.weather-card .content-left {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.weather-card .content-right {
+  flex: 2;
+}
+
+.weather-card .content-right .card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+  border-bottom: 1px solid #ccc;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Error / loading */
+.error {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.history {
+  padding: var(--padding);
+}
+
+.history ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history li {
+  padding: 10px 12px;
+  border-radius: .5rem;
+  cursor: pointer;
+  background: rgba(10, 10, 10, 0.3);
+  transition: background 0.15s;
+}
+
+.history li button {
+  min-width: 32px;
+  min-height: 32px;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
