@@ -8,14 +8,13 @@ A React + Vite weather app with location autocomplete and search history, powere
 - 📍 Geocoded suggestions with duplicate filtering
 - 🌤️ Current weather with condition icon, temperature, real feel, humidity, and today's high/low
 - 🕘 Search history with click-to-reload and per-item delete
-- 💾 History persisted locally via `localStorage`
 - 🎨 Glassmorphism UI styled with Tailwind CSS
 
 ## Tech Stack
 
 - [React](https://react.dev/) + [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/) v4
-- [OpenWeatherMap API](https://openweathermap.org/api) (current weather, geocoding, 5-day forecast)
+- [OpenWeatherMap API](https://openweathermap.org/api)
 - [Font Awesome](https://fontawesome.com/) for icons
 
 ## Getting Started
